@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: '1314个人博客名称',
-  domain: 'https://www.notion.so/1314share/0360845209664650aadf3dedf45b9a07?v=f91abcb9e928435ca2e333270bfb8a92',
+  domain: 'https://1314share.notion.site/0360845209664650aadf3dedf45b9a07?v=f91abcb9e928435ca2e333270bfb8a92',
   author: '1314',
 
   // open graph metadata (optional)
