@@ -37,19 +37,15 @@ export const NotionPageHeader: React.FC<{
   block: types.CollectionViewPageBlock | types.PageBlock
 }> = ({ block }) => {
   const { components, mapPageUrl } = useNotionContext()
-  const blockDate = block
-  if(block && block.properties && block.properties.title) {
-    blockDate.properties.title = block && block.properties && block.properties['EOaa'] || block.properties.title
-  }
 
   if (navigationStyle === 'default') {
-    return <Header block={blockDate} />
+    return <Header block={block} />
   }
 
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <Breadcrumbs block={blockDate} rootOnly={true} />
+        <Breadcrumbs block={block} rootOnly={true} />
 
         <div className='notion-nav-header-rhs breadcrumbs'>
           {navigationLinks
@@ -84,7 +80,7 @@ export const NotionPageHeader: React.FC<{
 
           <ToggleThemeButton />
 
-          {isSearchEnabled && <Search block={blockDate} title={null} />}
+          {isSearchEnabled && <Search block={block} title={null} />}
         </div>
       </div>
     </header>
