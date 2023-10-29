@@ -206,7 +206,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
     return <Loading />
   }
 
-  if (error || !site || !block || pageId.replace(/-/g, '') === site.rootNotionPageId) {
+  // 不展示首页增加 pageId.replace(/-/g, '') === site.rootNotionPageId
+  if (error || !site || !block) {
     return <Page404 site={site} pageId={pageId} error={error} />
   }
 
